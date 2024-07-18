@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex; /* Utiliza flexbox para el layout */
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .blog-posts {
+            flex: 2; /* Ocupa 2 partes del contenedor */
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            flex: 1; /* Ocupa 1 parte del contenedor */
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .blog-post:last-child {
+            border-bottom: none;
+        }
+
+        .post-title {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .post-image {
+            max-width: 90%; /* Ajuste del tamaño de la imagen */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .post-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .post-excerpt {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .post-content {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .post-tags {
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #007BFF;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .social-share {
+            margin-top: 15px;
+        }
+
+        .share-link {
+            color: #007BFF;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .share-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="blog-posts">
+            <article class="blog-post">
+                <h2 class="post-title">Título del Artículo</h2>
+                <img src="ruta/a/la/imagen.jpg" alt="Descripción de la imagen" class="post-image">
+                <div class="post-meta">
+                    <span class="post-date">Fecha de publicación: 16 de julio de 2024</span>
+                    <span class="post-author">Autor: Matías Donaire</span>
+                </div>
+                <p class="post-excerpt">Breve descripción del contenido del artículo...</p>
+                <div class="post-content">
+                    <p>Aquí comienza el contenido principal del artículo. Puedes incluir texto, imágenes, videos, y enlaces relevantes.</p>
+                    <p>Más contenido adicional...</p>
+                </div>
+                <div class="post-tags">
+                    <span class="tag">Etiqueta 1</span>
+                    <span class="tag">Etiqueta 2</span>
+                </div>
+                <div class="social-share">
+                    <a href="#" class="share-link">Compartir en Facebook</a>
+                    <a href="#" class="share-link">Compartir en Twitter</a>
+                </div>
+            </article>
+            <!-- Repite el bloque <article> para más entradas -->
+        </section>
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Aquí puedes añadir contenido adicional como enlaces, información sobre el autor, o artículos populares.</p>
+        </aside>
+    </div>
+</body>
+</html>

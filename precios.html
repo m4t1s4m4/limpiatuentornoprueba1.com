@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpia tu Entorno - Precios</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsivo */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/limpia tu entodno.png" alt="Limpia tu Entorno  Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="Actividades.html">Actividades</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Libros.html">Libros</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <h1>Productos</h1>
+    </section>
+    <section class="menu">
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/landin2.jpeg" alt="Proyecto de Limpieza" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Proyecto de Limpieza de Playas</h3>
+                <p>Iniciativa para limpiar las playas y preservar la vida marina.</p>
+                <p>Impacto positivo en el medio ambiente y la comunidad.</p>
+                <p class="price">$75.000 + IVA - Anual</p>
+                <a href="https://wa.me/1234567890?text=Estoy%20interesado%20en%20el%20Proyecto%20de%20Limpieza%20de%20Playas" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/Designer - 2024-07-09T194819.278 copy.jpeg" alt="Reforestación" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Proyecto de Reforestación</h3>
+                <p>Plantación de árboles en áreas urbanas y rurales.</p>
+                <p>Contribuye a mejorar la calidad del aire y el ecosistema.</p>
+                <p class="price">$105.000 + IVA - Anual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Proyecto de Reforestación" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/reciclaje_electronicos.jpg" alt="Reciclaje de electrónicos" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Reciclaje de electrónicos</h3>
+                <p>Recuperación y reciclaje de dispositivos electrónicos en desuso.</p>
+                <p>Previene la contaminación y recupera materiales valiosos.</p>
+                <p class="price">$60.000 + IVA - Mensual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Reciclaje de electrónicos" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/huertos_urbanos.jpg" alt="Huertos urbanos" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Huertos urbanos</h3>
+                <p>Creación de huertos en espacios urbanos para cultivo comunitario.</p>
+                <p>Fomenta la agricultura urbana y la autosuficiencia alimentaria.</p>
+                <p class="price">$90.000 + IVA - Instalación única</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en los Huertos urbanos" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/energia_solar.jpg" alt="Instalación de paneles solares" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Instalación de paneles solares</h3>
+                <p>Implementación de sistemas de energía solar en viviendas y empresas.</p>
+                <p>Contribuye a la generación de energía limpia y renovable.</p>
+                <p class="price">$200.000 + IVA - Instalación única</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en la Instalación de paneles solares" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/papel_reciclado.jpg" alt="Papel reciclado" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Papel reciclado</h3>
+                <p>Producción y venta de productos hechos con papel reciclado.</p>
+                <p>Reduce el consumo de papel nuevo y fomenta el reciclaje.</p>
+                <p class="price">$12.000 + IVA - Por paquete</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Papel reciclado" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/bicicletas_compartidas.jpg" alt="Sistema de bicicletas compartidas" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Sistema de bicicletas compartidas</h3>
+                <p>Implementación de un sistema de bicicletas para uso comunitario.</p>
+                <p>Promueve la movilidad sostenible y la salud.</p>
+                <p class="price">$75.000 + IVA - Anual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Sistema de bicicletas compartidas" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/ropa_usada.jpg" alt="Venta de ropa usada" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Venta de ropa usada / reparación de ropa o manufactura de productos con ropa en desuso</h3>
+                <p>Reutilización de ropa para reducir desechos textiles.</p>
+                <p>Contribuye a un consumo más responsable y sostenible.</p>
+                <p class="price">$50.000 + IVA - Mensual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en la Venta de ropa usada" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/vehiculos_compartidos.jpg" alt="Uso de vehículos compartidos" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Uso de vehículos compartidos (venta de lugares en vehículos para viajes)</h3>
+                <p>Compartir viajes para reducir el impacto ambiental.</p>
+                <p>Fomenta la movilidad sostenible y el ahorro de recursos.</p>
+                <p class="price">$30.000 + IVA - Por viaje</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Uso de vehículos compartidos" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/compost.jpg" alt="Compost en la vivienda y comunitario" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Compost en la vivienda y comunitario</h3>
+                <p>Producción de compost a partir de residuos orgánicos.</p>
+                <p>Mejora la fertilidad del suelo y reduce desechos.</p>
+                <p class="price">$20.000 + IVA - Mensual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Compost en la vivienda y comunitario" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/residuos_no_organicos.jpg" alt="Manejo y control de residuos no orgánicos" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Manejo y control de residuos no orgánicos</h3>
+                <p>Gestión eficiente de residuos no orgánicos.</p>
+                <p>Promueve la reducción y el reciclaje de residuos.</p>
+                <p class="price">$40.000 + IVA - Mensual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Manejo y control de residuos no orgánicos" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/limpiezas_comunitarias.jpg" alt="Limpiezas comunitarias de ríos, plazas, etc." onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Limpiezas comunitarias de ríos, plazas, otros. Comunidad</h3>
+                <p>Organización de actividades de limpieza en la comunidad.</p>
+                <p>Fomenta el cuidado del entorno y la colaboración comunitaria.</p>
+                <p class="price">$15.000 + IVA - Por evento</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en las Limpiezas comunitarias" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/recoleccion_agua.jpg" alt="Recolección de agua" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Recolección de agua (modelo ekomuro h2o - modelos alternativos)</h3>
+                <p>Recolección y almacenamiento de agua de lluvia.</p>
+                <p>Contribuye al uso eficiente del agua y al ahorro.</p>
+                <p class="price">$80.000 + IVA - Instalación única</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en la Recolección de agua" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/productos_reutilizados.jpg" alt="Venta de artículos con productos reutilizados" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Venta de artículos con productos reutilizados</h3>
+                <p>Fabricación de productos a partir de materiales reutilizados.</p>
+                <p>Fomenta la economía circular y la sostenibilidad.</p>
+                <p class="price">$25.000 + IVA - Mensual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en la Venta de artículos con productos reutilizados" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/barberia_sostenible.jpg" alt="Barbería sostenible" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Barbería sostenible</h3>
+                <p>Servicios de barbería utilizando productos ecológicos.</p>
+                <p>Reducción de residuos y uso de productos naturales.</p>
+                <p class="price">$10.000 + IVA - Por sesión</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en la Barbería sostenible" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/qr_madera.jpg" alt="QR de madera" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>QR de madera</h3>
+                <p>Creación de códigos QR en materiales de madera reciclada.</p>
+                <p>Fomenta la innovación y el reciclaje creativo.</p>
+                <p class="price">$5.000 + IVA - Por unidad</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en los QR de madera" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/jabones_aceite_usado.jpg" alt="Jabones con aceite usado" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Jabones con aceite usado</h3>
+                <p>Producción de jabones ecológicos a partir de aceite usado.</p>
+                <p>Reduce la contaminación y promueve la reutilización.</p>
+                <p class="price">$3.000 + IVA - Por unidad</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en los Jabones con aceite usado" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+        
+        <!-- Añadir más iniciativas similares aquí -->
+    </section>
+
+    <section id="socials">
+        <h2>Redes Sociales</h2>
+        <div class="social">
+            <a href="https://www.tiktok.com/@m4m1s4m4?_t=8ny4UEmt8mz&_r=1"><img src="imagenes/tik-tok.png" alt="TikTok"></a>
+            <a href="http://www.youtube.com/@m4t1s4m4"><img src="imagenes/youtube.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/websoftwarechile?igsh=MWllanVqdGZ4bGFqeg=="><img src="imagenes/instagram (1).png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/share/PBLAvauDFCnhfVsk/?mibextid=qi2Omg"><img src="imagenes/face.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@m4m1s4m4?_t=8ny4UEmt8mz&_r=1"><img src="imagenes/linkedin (1).png" alt="TikTok"></a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 LeonCode.dev. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+        }
+    
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    
+        // Cerrar modal al presionar la tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+    

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpia tu Entorno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/limpia tu entodno.png" alt="Limpia tu Entorno  Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="Actividades.html">Actividades</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Libros.html">Libros</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con imagen de fondo y llamado a la acción -->
+    <section id="hero">
+
+        <div class="hero-content">
+            <h1>Bienvenid@s a Limpia tu Entorno</h1>
+            <p>Transforma tu entorno de manera sostenible</p>
+            <a href="https://wa.me/1234567890?text=Estoy%20interesado%20en%20el%20Proyecto%20de%20Limpieza%20de%20Playas" target="_blank">
+                <button class="whatsapp-button">Solicitar más información</button>
+            </a>
+        </div>
+    </section>
+    <section id="consoles">
+        <h2>Actividades Recientes</h2>
+        <div class="card">
+            <img src="imagenes/ps4.png" alt="Limpieza de Parques">
+            <h3>Limpieza de Parques</h3>
+        </div>
+        <div class="card">
+            <img src="imagenes/nintendo.png" alt="Educación Ambiental">
+            <h3>Educación Ambiental</h3>
+        </div>
+        <div class="card">
+            <img src="imagenes/Designer - 2024-07-12T141343.300.jpeg" alt="Reciclaje Comunitario">
+            <h3>Reciclaje Comunitario</h3>
+        </div>
+        <!-- Agregar más actividades aquí -->
+    </section>
+    <!-- Sección de Proyectos Populares -->
+    <section id="series">
+        <h2>Proyectos más Populares</h2>
+    </section>
+
+    <!-- Sección de Menú con Iniciativas y precios -->
+    <section class="menu">
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/landin2.jpeg" alt="Proyecto de Limpieza" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Proyecto de Limpieza de Playas</h3>
+                <p>Iniciativa para limpiar las playas y preservar la vida marina.</p>
+                <p>Impacto positivo en el medio ambiente y la comunidad.</p>
+                <p class="price">$75.000 + IVA - Anual</p>
+                <a href="https://wa.me/1234567890?text=Estoy%20interesado%20en%20el%20Proyecto%20de%20Limpieza%20de%20Playas" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/Designer - 2024-07-09T194819.278 copy.jpeg" alt="Reforestación" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Proyecto de Reforestación</h3>
+                <p>Plantación de árboles en áreas urbanas y rurales.</p>
+                <p>Contribuye a mejorar la calidad del aire y el ecosistema.</p>
+                <p class="price">$105.000 + IVA - Anual</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en el Proyecto de Reforestación" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+        
+
+        
+
+
+        <div class="item">
+            <div class="img-container">
+                <img src="imagenes/jabones_aceite_usado.jpg" alt="Jabones con aceite usado" onclick="openModal(this)">
+            </div>
+            <div class="item-content">
+                <h3>Jabones con aceite usado</h3>
+                <p>Producción de jabones ecológicos a partir de aceite usado.</p>
+                <p>Reduce la contaminación y promueve la reutilización.</p>
+                <p class="price">$3.000 + IVA - Por unidad</p>
+                <a href="https://wa.me/56964855203?text=Hola! Estoy interesad@ en los Jabones con aceite usado" target="_blank">
+                    <button class="whatsapp-button">Solicitar más información</button>
+                </a>
+            </div>
+        </div>
+<!-- Añadir más iniciativas similares aquí -->
+    </section>
+    <!-- Sección de Redes Sociales -->
+    <section id="socials">
+        <h2>Redes Sociales</h2>
+        <div class="social">
+            <a href="https://www.tiktok.com/@m4m1s4m4?_t=8ny4UEmt8mz&_r=1"><img src="imagenes/tik-tok.png" alt="TikTok"></a>
+            <a href="http://www.youtube.com/@m4t1s4m4"><img src="imagenes/youtube.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/websoftwarechile?igsh=MWllanVqdGZ4bGFqeg=="><img src="imagenes/instagram (1).png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/share/PBLAvauDFCnhfVsk/?mibextid=qi2Omg"><img src="imagenes/face.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@m4m1s4m4?_t=8ny4UEmt8mz&_r=1"><img src="imagenes/linkedin (1).png" alt="LinkedIn"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Limpia tu Entorno. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Cerrar modal al presionar la tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
