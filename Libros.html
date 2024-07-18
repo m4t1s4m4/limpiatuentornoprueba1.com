@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpia tu Entorno - Libros</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsivo */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        /* Estilos de la galería de libros */
+        .book-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .book-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .book-card img {
+            width: 90%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer; /* Añadir cursor para indicar que es clickeable */
+        }
+
+        .book-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .book-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .download-button {
+            background-color: #228b22; /* Color verde */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #006400; /* Color verde más oscuro */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/limpia tu entodno.png" alt="Limpia tu Entorno Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="Actividades.html">Actividades</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Libros.html">Libros</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Libros de Limpia tu Entorno</h1>
+    </section>
+
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Buscar libros...">
+    </div>
+
+    <div class="book-gallery" id="book-gallery">
+        <!-- Ejemplo de tarjeta de libro -->
+        <div class="book-card">
+            <img src="imagenes/limpia tu entodno.png" alt="Portada del libro" onclick="openModal(this)">
+            <h3>Guia</h3>
+            <p>Autor: Nombre del Autor</p>
+            <p>Breve descripción del libro...</p>
+
+            <button class="download-button" onclick="window.location.href='documentos/Iniciativa.pdf'">Descargar</button>
+        </div>
+
+        <!-- Más tarjetas de libros -->
+    </div>
+
+    <footer>
+        <section id="socials">
+            <h2>Redes Sociales</h2>
+            <div class="social">
+                <a href="https://www.tiktok.com/@m4m1s4m4?_t=8ny4UEmt8mz&_r=1"><img src="imagenes/tik-tok.png" alt="TikTok"></a>
+                <a href="http://www.youtube.com/@m4t1s4m4"><img src="imagenes/youtube.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/websoftwarechile?igsh=MWllanVqdGZ4bGFqeg=="><img src="imagenes/instagram (1).png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/share/PBLAvauDFCnhfVsk/?mibextid=qi2Omg"><img src="imagenes/face.png" alt="Facebook"></a>
+                <a href="https://www.tiktok.com/@m4m1s4m4?_t=8ny4UEmt8mz&_r=1"><img src="imagenes/linkedin (1).png" alt="TikTok"></a>
+            </div>
+        </section>
+        <p>&copy; 2024 LeonCode.dev. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+        }
+    
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    
+        // Cerrar modal al presionar la tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+
+        // Script para buscar libros
+        document.getElementById('search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const books = document.querySelectorAll('.book-card');
+            books.forEach(book => {
+                const title = book.querySelector('h3').innerText.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    book.style.display = 'block';
+                } else {
+                    book.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

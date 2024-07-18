@@ -1,0 +1,446 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f3; /* Fondo claro y suave */
+    color: #333; /* Texto oscuro para mejor legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #5f9ea0; /* Color verde azulado */
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    overflow: hidden; /* Asegura que el contenido no desborde */
+    border-radius: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Menu Styles */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    width: calc(33% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.item-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.item-content h3 {
+    margin-top: 0;
+    color: #228b22; /* Color verde para los títulos */
+    font-size: 1.2em;
+}
+
+.item-content p {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.price {
+    color: #e07a5f;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.whatsapp-button {
+    background-color: #228b22; /* Color verde */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    font-size: 22px;
+    
+}
+
+.whatsapp-button:hover {
+    background-color: #006400; /* Color verde más oscuro */
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.member-info {
+    margin-bottom: 20px;
+}
+
+.member-info h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #228b22; /* Color verde */
+}
+
+.member-info p {
+    color: #777;
+    margin: 5px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+}
+
+.social-links img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background: #5f9ea0; /* Color verde azulado */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Submenú responsivo */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #5f9ea0; /* Color verde azulado */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #fff;
+    }
+
+    nav ul li:first-child {
+        border-top: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .menu-toggle.open + ul {
+        display: flex;
+    }
+}
+
+#hero {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #228b22, #8fbc8f); /* Degradado de verde a verde claro */
+    color: #fff;
+    
+}
+
+#hero h1 {
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#projects,
+#activities,
+#contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #228b22; /* Color verde */
+    font-size: 2.5rem;
+}
+
+.card {
+    display: inline-block;
+    margin: 1rem;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px; /* Asegura que todas las tarjetas tengan la misma altura */
+    overflow: hidden; /* Asegura que el contenido no desborde */
+}
+
+.card img {
+    width: 100%;
+    height: auto; /* Asegura que la imagen no se deforme */
+    max-height: 150px; /* Asegura que la imagen no exceda esta altura */
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #00bfff;
+    margin-top: 0.5rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social a img {
+    width: 50px;
+    height: 50px; /* Asegura que los iconos de redes sociales tengan un tamaño fijo */
+    transition: transform 0.3s;
+}
+
+.social a img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #282828;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#img01 {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #projects, #activities, #contact {
+        padding: 1rem;
+    }
+}
